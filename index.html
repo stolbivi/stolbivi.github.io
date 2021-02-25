@@ -1,1 +1,28 @@
-Hello there!
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <title>Page Monitor Test Page</title>
+</head>
+<body>
+<div class="d-flex justify-content-center p-5">
+    <div class="d-flex w-100 align-items-center flex-column">
+    <h5 class="text-info">This is a test page for Page Monitor browser extension</h5>
+    <p>This page simulates typical design of web sites in order to test application features</p>
+    <div class="d-flex w-50 justify-content-between align-items-center p-2">
+        <div class="w-50">Block on the right is a single text block with random price. This is a rare design these days because static is intermixed with dynamic price and it makes it difficult to give them different color or size. This block can work with both 'click button' and text</div>
+        <div id="single" class="p-5 bg-light border border-primary text-dark rounded">Deal of the day: </div>
+        <script>document.getElementById("single").innerHTML = 'Deal of the day: $'+Math.round(Math.random()*100, 2)</script>
+    </div>
+        <div class="d-flex w-50 justify-content-between align-items-center p-2">
+            <div class="w-50">Block on the right is technically 2 separate blocks of text: static label and random price. This is a standard design these days as it is more flexible. This block better works when is selected with 'click button'</div>
+            <div class="p-5 bg-light border border-primary text-dark rounded"><span class="text-info">Deal of the day: </span><span id="separated" class="text-danger"></span></div>
+            <script>document.getElementById("separated").innerHTML = "$"+Math.round(Math.random()*100, 2)</script>
+        </div>
+    </div>
+</div>
+</body>
+</html>
